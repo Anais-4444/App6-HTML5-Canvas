@@ -31,20 +31,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-    	<style>
-        body {
-            margin: 0;
-            text-align: center;
-        }
-        canvas {
-            border: 2px solid black;
-            display: block;
-            margin: 10px auto;
-        }
-        .button-container {
-            margin-top: 10px;
-        }
-    	</style>
      </head>
 
 
@@ -82,7 +68,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	 <canvas id="myCanvas" width="300" height="300"></canvas>
+	 <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	 </canvas>
     
     <div class="button-container">
         <button onclick="drawRectangle()">Draw Rectangle</button>
@@ -101,7 +88,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         }
 
         function drawName() {
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "white";
             ctx.font = "20px Arial";
             ctx.fillText("Anais Rivera", 100, 150);
         }
