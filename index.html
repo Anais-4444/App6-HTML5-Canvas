@@ -24,8 +24,8 @@ blah, blah, blah, blah
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
-   <head> 
+
+     <head> 
       <title>App6---HTML5-Canvas</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,7 +36,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+// alert("This file last modified " + docMod); generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
 
@@ -63,15 +63,16 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </style>
 
 <body>
+<!-- Displays "App6---HTML5-Canvas" at the top of the screen as a header. -->
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<!-- code to create a canvas with a 1px border at a size appropriate to fit onto an iPhone screen. -->
+	<!-- Code to create a canvas with a 1px border at a size appropriate to fit onto an iPhone screen. -->
 	 <canvas id="myCanvas" width="300" height="400" style="border:1px solid #000000;">
 	 </canvas>
-    <!-- code to create buttons that are linked to a function. The "Draw Rectangle" button will prompt the function drawRectangle(),
+    <!-- Code to create buttons that are linked to a function. The "Draw Rectangle" button will prompt the function drawRectangle(),
 	 the "Draw Name" button will prompt the function drawName(), the "Draw Image" button will prompt the function to drawImage(),
 	 and the "Clear Canvas" button will prompt the function clearCanvas(). -->
     <div class="button-container">
@@ -80,9 +81,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         <button onclick="drawImage()">Draw Image</button>
         <button onclick="clearCanvas()">Clear Canvas</button>
     </div>
-
+<!-- Beginning of CSS code. -->
     <script>
+	// Retrieves the node in the DOM representing the <canvas> element.
         var canvas = document.getElementById("myCanvas");
+	// Specifies that 2D graphics will be used, getContext() is used to obtain the rendering context and its drawing functions.
         var ctx = canvas.getContext("2d");
 
 	// Function to draw a rectangle in the canvas that is purple when the "Draw Rectangle" button is pressed. Positions and sizes the rectangle appropriately.
@@ -112,12 +115,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         function clearCanvas() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
         }
+// end of CSS code
     </script>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-<!-- displays DIY! at the bottom of the page as a footer -->
+<!-- displays "DIY!" at the bottom of the page as a footer -->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
